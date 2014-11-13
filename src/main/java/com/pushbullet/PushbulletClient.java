@@ -1,8 +1,6 @@
 package com.pushbullet;
 
 import org.apache.commons.codec.binary.Base64;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -14,10 +12,8 @@ import java.nio.charset.StandardCharsets;
 public class PushbulletClient {
     protected String BASE_URL = "https://api.pushbullet.com/v2";
 
-    @Value("${pushbullet.key}")
     protected String key;
 
-    @Autowired
     protected RestTemplate restTemplate;
 
     protected <Request, Response> Response post(String context, Request request, Class<Response> responseClass) {
@@ -32,5 +28,19 @@ public class PushbulletClient {
         return entity.getBody();
     }
 
+    public String getKey() {
+        return key;
+    }
 
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public RestTemplate getRestTemplate() {
+        return restTemplate;
+    }
+
+    public void setRestTemplate(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 }

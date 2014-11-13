@@ -36,7 +36,7 @@ public class PushbulletTest {
     @Test
     public void note() throws Exception {
         registerClient(pushbulletClient);
-        pushbullet().pushes().channel("ii").note("to chanel", "test");
+        pushbullet().pushes().channel("pushbullet-java").note("to chanel", "test");
         pushbullet().pushes().broadcast().note("broadcast", "test");
     }
 }
