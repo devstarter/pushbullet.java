@@ -1,9 +1,7 @@
-Pushbullet
-==========
+Pushbullet on Spring
+===================
 
 Java (Spring) library for Pushbullet API
-
-# Usage example
 
 ```xml
 <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
