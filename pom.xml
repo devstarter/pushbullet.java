@@ -13,10 +13,9 @@
     <properties>
         <spring.version>3.2.5.RELEASE</spring.version>
         <java.version>1.7</java.version>
-	<github.global.server>github</github.global.server>
+        <github.global.server>github</github.global.server>
         <github.maven-plugin>0.10</github.maven-plugin>
     </properties>
-    
     <distributionManagement>
             <repository>
                 <id>internal.repo</id>
@@ -24,7 +23,6 @@
                 <url>file://${project.build.directory}/mvn-repo</url>
             </repository>
     </distributionManagement>
-    
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -99,4 +97,6 @@
                 </plugin>
             </plugins>
     </build>
+
+
 </project>

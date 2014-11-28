@@ -1,5 +1,5 @@
 package com.pushbullet.entities;
 
 public enum PushType {
-    note
+    note, link
 }

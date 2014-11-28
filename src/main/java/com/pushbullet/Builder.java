@@ -61,5 +61,13 @@ public class Builder {
             request.body = body;
             return client.post(CONTEXT, request, PushResponse.class);
         }
+
+        public PushResponse link(String title, String body, String url) {
+            request.type = PushType.link;
+            request.title = title;
+            request.body = body;
+            request.url = url;
+            return client.post(CONTEXT, request, PushResponse.class);
+        }
     }
 }

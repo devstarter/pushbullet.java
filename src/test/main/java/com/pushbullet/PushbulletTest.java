@@ -40,4 +40,9 @@ public class PushbulletTest {
     public void utf() {
         pushbullet().pushes().broadcast().note("Привет", "Текст на русском");
     }
+
+    @Test
+    public void Link() {
+        pushbullet().pushes().channel("pushbullet-java").link("to chanel", "test","this is url");
+    }
 }
